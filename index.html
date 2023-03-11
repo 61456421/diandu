@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>跟着雨杭学</title>
+</head>
+<body>
+
+<aside>
+<div id="b">
+<a class="学" onclick="playAudio('xx.m4a')">跟着雨杭学方言</a>
+</div>
+</aside>
+<div id="a">
+&nbsp;&nbsp;<a class="吃饭" onclick="playAudio('cf.m4a')">吃饭了吗？</a>&nbsp;&nbsp;
+<a class="吃了" onclick="playAudio('cl.m4a')">吃了，现在去哪呢？</a>&nbsp;&nbsp;
+<a class="哦" onclick="playAudio('o.m4a')">哦，我去逛逛。</a>&nbsp;&nbsp;
+<a class="咦" onclick="playAudio('yi.m4a')">咦，前面怎么围了一群人？</a>&nbsp;&nbsp;
+<a class="走进" onclick="playAudio('zj.m4a')">走进一看，</a>&nbsp;&nbsp;
+<a class="原来" onclick="playAudio('yl.m4a')">原来是一个男孩在跳舞。</a>&nbsp;&nbsp;
+<a class="旁边" onclick="playAudio('pb.m4a')">旁边围着一群姑娘在看。</a>
+</div>
+<style>
+select{
+width:120px;
+height:40px;
+}
+#select{
+position: absolute;
+top:70px;
+right:50px;
+}
+#b{
+text-align: center;
+font-size: 63px;
+color:white;
+}
+aside{
+margin-top:50px;
+width:auto;
+height:100px;
+background:green;
+}
+#a{
+margin-top:200px;
+ font-size: 60px;
+ }
+.吃饭{
+ font-size: 50px;
+ color:orange;
+ }
+.吃了{
+ color:white;
+ }
+.哦{
+ color:orange;
+ }
+.咦{
+ color:white;
+ }
+.走进{
+ color:orange;
+ }
+.原来{
+ color:white;
+ }
+.旁边{
+ color:orange;
+ }
+.a{
+Width:190px;
+height:95px;
+background:red;
+border: 0;
+ outline: none; 
+ caret-color:transparent;
+     position:absolute;
+    top:310px;
+     left:278px;
+ }
+.b{
+Width:170px;
+height:100px;
+background:red;
+border: 0;
+ outline: none; 
+ caret-color:transparent;
+     position:absolute;
+    top:180px;
+     left:650px;
+ }
+.c{
+Width:250px;
+height:90px;
+background:red;
+border: 0;
+ outline: none; 
+ caret-color:transparent;
+     position:absolute;
+    top:1260px;
+     left:72px;
+ }
+img:not([src]){
+
+opacity:0;
+
+}
+body{
+background:url("./1.png") no-repeat center fixed;
+-webkit-background-size: cover;
+}
+</style>
+</body>
+	<script>
+		var currentAudio = null;
+
+		function playAudio(audioUrl) {
+			if (currentAudio) {
+				currentAudio.pause(); // 停止当前正在播放的音频
+			}
+			var audio = new Audio(audioUrl);
+			audio.play();
+			currentAudio = audio; // 将当前音频设置为正在播放的音频
+		}
+	</script>
+</html>
